@@ -122,15 +122,21 @@
       </article>
 
       <!-- 03 -->
-      <article class="proj">
+      <article class="proj proj-stacked">
+        <a class="proj-thumb thumb-terminal" href="assets/trueending-progress.png" target="_blank" rel="noopener"
+           title="Open the progress report at full size">
+          <img src="assets/trueending-progress.png" width="1729" height="492" loading="lazy"
+               alt="Terminal output of configure.py progress: 99.30% matched, 18054 of 18155 functions" />
+        </a>
         <div class="proj-body">
           <h3>TrueEnding <span class="year">(2026)</span></h3>
           <p class="role">Systems research &amp; tooling</p>
           <p>
             A byte-matching decompilation of <em>The Last Story</em> (Nintendo Wii), paired with a
             static recompilation that runs the game natively on PC instead of inside an emulator.
-            Half the game's code is matched byte-for-byte, and the native runner draws it in a
-            real window at a configurable frame rate.
+            99.3% of the game's code now matches the retail binary byte-for-byte — 18,054 of
+            18,155 functions — with 999 of 1,025 files linked, and the native runner boots and
+            renders through Direct3D 11.
           </p>
           <h4 class="mini">Contributions</h4>
           <ul class="plain">
@@ -138,7 +144,7 @@
             <li>Verification tooling: an interactive assembly diff helper and objdiff integration, plus a machine-readable progress ledger tracking match state per module</li>
             <li>Native host runtime: memory mapping and MMIO shims so PowerPC 750CL guest code executes on x86-64 without emulator overhead</li>
             <li>Matched low-level systems — OS threading and memory arenas, DVD/NAND I/O, GX graphics pipeline</li>
-            <li>Work spanning C, C++ and PowerPC assembly across 522 linked translation units</li>
+            <li>Work spanning C, C++ and PowerPC assembly across 999 linked files</li>
           </ul>
           <dl class="meta">
             <div><dt>Role</dt><dd>Solo — tooling, systems, native runtime</dd></div>
@@ -149,10 +155,6 @@
           <p class="proj-links">
             <a href="https://github.com/Phat-Hy/TrueEnding" target="_blank" rel="noopener">Repository ↗</a>
           </p>
-        </div>
-        <div class="proj-thumb thumb-plate" aria-hidden="true">
-          <span class="plate-mark">TE</span>
-          <span class="plate-label">Wii byte-matching decomp · native PC runner</span>
         </div>
       </article>
 
