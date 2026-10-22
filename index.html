@@ -187,6 +187,40 @@
         </div>
       </article>
 
+      <!-- 05 -->
+      <article class="proj">
+        <div class="proj-body">
+          <h3>Local Avatar Engine <span class="year">(2026)</span></h3>
+          <p class="role">Hobby project — real-time 3D + local inference</p>
+          <p>
+            An avatar that holds a conversation without touching the cloud: a local LLM runs on the
+            GPU, a flow-matching speech model clones a voice, and both are lip-synced onto an MMD
+            character rendered in the browser. No API keys, no telemetry, everything on one machine.
+          </p>
+          <h4 class="mini">Contributions</h4>
+          <ul class="plain">
+            <li>Real-time pipeline: a WebSocket orchestrator streaming LLM tokens through sentence splitting, speech synthesis, viseme extraction and 3D lipsync, with instant speech interruption</li>
+            <li>Latency work: sub-second speech generation (real-time factor 0.09–0.14), GPU kernel warm-up to remove first-turn delay, 35–45 tokens/sec generation</li>
+            <li>3D: MMD PMX and GLB avatars in Babylon.js, rigid-body secondary motion for hair and cloth, procedural breathing, blinks and eye saccades</li>
+            <li>Local inference: GGUF models via llama.cpp with GPU offload, plus swappable TTS backends behind one microservice</li>
+            <li>Streamed emotion and gesture tags parsed from text and mapped to facial blendshapes and bone animation</li>
+          </ul>
+          <dl class="meta">
+            <div><dt>Role</dt><dd>Solo — engine, backend, front end</dd></div>
+            <div><dt>Stack</dt><dd>Python, FastAPI, PyTorch/CUDA, Babylon.js, llama.cpp</dd></div>
+            <div><dt>Runs</dt><dd>Fully offline on a consumer GPU</dd></div>
+            <div><dt>Foundation</dt><dd>Extends the open-source DLP3D project</dd></div>
+          </dl>
+          <p class="proj-links">
+            <a href="https://github.com/Phat-Hy/local-waifu-dlp3d" target="_blank" rel="noopener">Repository ↗</a>
+          </p>
+        </div>
+        <div class="proj-thumb thumb-plate" aria-hidden="true">
+          <span class="plate-mark">AV</span>
+          <span class="plate-label">Offline avatar · local LLM + voice + lipsync</span>
+        </div>
+      </article>
+
     </div>
   </section>
 
