@@ -36,15 +36,15 @@ Then visit <http://localhost:8000>.
 
 ## Deploy
 
-```powershell
-pwsh ./deploy-azure.ps1
-```
+Hosted with **GitHub Pages** at <https://phat-hy.github.io>.
 
-The script is idempotent: it reuses the resource group and storage account if they already
-exist, enables static website hosting, uploads every file, and prints the public URL.
+Pages is configured in the repository settings (Settings → Pages → Deploy from a branch →
+`main` → `/ (root)`). Pushing to `main` republishes. `.nojekyll` keeps Jekyll from processing
+the files.
+
+`deploy-azure.ps1` remains in the repo as an alternative hoster (Azure Blob static website).
+It is not used for the live site — that Azure resource group has been deleted.
 
 ## Notes
 
-- Placeholders written as `__EMAIL__` must be replaced before publishing — the deploy script
-  refuses to run while any `__TOKEN__` placeholder is still present.
 - The Steam key art is loaded from Valve's CDN rather than copied into this repo.
