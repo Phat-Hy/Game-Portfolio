@@ -4,9 +4,9 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Phat Hy — Unity Game Developer</title>
-<meta name="description" content="Unity game developer building gameplay systems and enemy AI. FPT University Software Engineering graduate. Shipped a Steam FPS and a browser puzzle game." />
+<meta name="description" content="Unity game developer building gameplay systems, enemy AI and the tooling around them. Steam-bound FPS and a live .NET service that rebalances AI from telemetry." />
 <meta property="og:title" content="Phat Hy — Unity Game Developer" />
-<meta property="og:description" content="Gameplay systems and enemy AI in Unity. Steam title: 81 Days and Nights." />
+<meta property="og:description" content="Gameplay systems, enemy AI, and the tools that keep them debuggable." />
 <meta property="og:type" content="website" />
 <link rel="stylesheet" href="assets/styles.css" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%237c5cff'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E" />
@@ -22,8 +22,8 @@
     </a>
     <nav aria-label="Main">
       <a href="#work">Work</a>
+      <a href="#cases">Case studies</a>
       <a href="#skills">Skills</a>
-      <a href="#about">About</a>
       <a class="nav-cta" href="#contact">Contact</a>
     </nav>
   </div>
@@ -35,21 +35,21 @@
   <section class="hero" id="top">
     <div class="glow" aria-hidden="true"></div>
     <div class="wrap">
-      <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Unity · C# · Gameplay &amp; AI</p>
-      <h1>I build the systems<br /><span class="grad">players never notice&nbsp;—<br class="br-md" /> until they break.</span></h1>
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Unity · C# · Gameplay Systems &amp; AI</p>
+      <h1>Gameplay systems,<br />enemy AI, and the tools<br /><span class="grad">that keep them debuggable.</span></h1>
       <p class="lede">
-        Unity game developer and Software Engineering graduate from FPT University.
-        I work on gameplay mechanics and enemy AI, with a title heading to Steam and a game live on itch.io.
+        Unity developer. I built the enemy AI and gameplay systems for an FPS heading to Steam,
+        then wrote the .NET service that rebalances that AI from live telemetry — one player at a time.
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#work">See my work</a>
-        <a class="btn" href="https://store.steampowered.com/app/5042430/81_Days_And_Nights/" target="_blank" rel="noopener">Steam page</a>
-        <a class="btn" href="https://hypergs.itch.io" target="_blank" rel="noopener">itch.io</a>
+        <a class="btn btn-primary" href="#work">See the work</a>
+        <a class="btn" href="#cases">Read the case studies</a>
+        <a class="btn" href="https://store.steampowered.com/app/5042430/81_Days_And_Nights/" target="_blank" rel="noopener">Steam page ↗</a>
       </div>
       <dl class="stats">
-        <div><dt>Projects</dt><dd>2</dd></div>
-        <div><dt>Engine</dt><dd>Unity</dd></div>
-        <div><dt>Focus</dt><dd>Gameplay + AI</dd></div>
+        <div><dt>Focus</dt><dd>Systems &amp; AI</dd></div>
+        <div><dt>Stack</dt><dd>Unity · C# · .NET</dd></div>
+        <div><dt>Shipped to</dt><dd>Steam · itch.io</dd></div>
       </dl>
     </div>
   </section>
@@ -57,77 +57,86 @@
   <!-- -------------------------------------------------------------- featured -->
   <section class="section" id="work">
     <div class="wrap">
-      <h2 class="section-title"><span>Featured project</span></h2>
+      <h2 class="section-title"><span>Featured work</span></h2>
 
       <article class="feature">
         <div class="feature-media">
-          <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5042430/e19d48b8873835e713a04ee3a504a10d583fa0b2/header.jpg?t=1789454736"
-               alt="81 Days and Nights key art" loading="lazy" width="460" height="215" />
+          <a href="https://store.steampowered.com/app/5042430/81_Days_And_Nights/" target="_blank" rel="noopener">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5042430/e19d48b8873835e713a04ee3a504a10d583fa0b2/header.jpg?t=1789454736"
+                 alt="81 Days and Nights key art" loading="lazy" width="460" height="215" />
+          </a>
           <span class="badge">Steam · Coming soon</span>
         </div>
         <div class="feature-body">
           <h3>81 Days and Nights</h3>
-          <p class="role">Enemy AI &amp; gameplay engineering — AnomalyVN Studio</p>
-          <p>
-            A single-player historical FPS set during the 1972 Battle of Quang Tri. Across a
-            four-mission campaign and an endless Survival mode, the player holds a defensive line
-            against waves of attackers.
+          <p class="role">Enemy AI &amp; gameplay systems · AnomalyVN Studio · Unity + C#</p>
+
+          <p class="lead">
+            A historical single-player FPS set in the 1972 Battle of Quang Tri, with a four-mission
+            campaign and an endless Survival mode.
           </p>
+
+          <h4 class="mini">What I built</h4>
+          <ul class="plain">
+            <li>NavMesh-driven enemy AI — three behaviour modes (Wander / Ambush / Sniper), perception by line-of-sight raycast.</li>
+            <li>A cover system with positional claims, so squadmates never fight over the same wall.</li>
+            <li>Peek and flanking behaviours, with engagement distances spread across the squad.</li>
+            <li>Editor tooling: custom inspectors, a CLI verification harness, an automated API integration runner.</li>
+          </ul>
+
+          <h4 class="mini">Why it mattered</h4>
           <p>
-            My contribution was on the engineering side: the enemy AI that drives the attackers,
-            and the gameplay systems they plug into. In Survival mode the AI has to press the player,
-            force repositioning, and stay readable under heavy load — which is a systems problem
-            before it is a scripting one.
+            Twelve soldiers that each pick the nearest wall read as one dumb soldier, twelve times.
+            The work was making a group look coordinated while staying cheap enough to run.
           </p>
+
           <ul class="tags">
-            <li>Unity</li><li>C#</li><li>Enemy AI</li><li>Gameplay systems</li><li>Steam</li>
+            <li>Unity</li><li>C#</li><li>NavMesh</li><li>Enemy AI</li><li>Editor tools</li>
           </ul>
           <div class="links">
-            <a class="btn btn-sm btn-primary" href="https://store.steampowered.com/app/5042430/81_Days_And_Nights/" target="_blank" rel="noopener">View on Steam</a>
+            <a class="btn btn-sm btn-primary" href="https://store.steampowered.com/app/5042430/81_Days_And_Nights/" target="_blank" rel="noopener">Steam page ↗</a>
           </div>
         </div>
       </article>
 
-      <!-- ------------------------------------------------------------ grid -->
-      <h2 class="section-title mt-lg"><span>More projects</span></h2>
-      <div class="grid">
+      <div class="grid mt-md">
 
         <article class="card">
-          <div class="card-top">
-            <span class="chip">Playable in browser</span>
-          </div>
+          <div class="card-top"><span class="chip">Playable in browser</span></div>
           <h3>SuikaClone</h3>
-          <p class="role">Solo — mechanics &amp; implementation</p>
+          <p class="role">Solo · Unity · WebGL · itch.io</p>
           <p>
-            A physics puzzle built around the merge mechanic: drop fruit, match equals, chain them
-            into a bigger body without overfilling the container. I built the mechanics myself —
-            merge detection, drop and settling behaviour, and the failure state that ends a run.
+            A physics puzzle built on one mechanic: drop, merge equal fruit, keep the container
+            from overflowing.
           </p>
-          <ul class="tags"><li>Unity</li><li>WebGL / HTML5</li><li>2D physics</li><li>Merge logic</li></ul>
+          <h4 class="mini">What I built</h4>
+          <ul class="plain">
+            <li>Merge detection and equal-type combining.</li>
+            <li>Drop, settling and overflow behaviour.</li>
+            <li>Scoring, lose state, WebGL export.</li>
+          </ul>
+          <ul class="tags"><li>Unity</li><li>WebGL</li><li>2D physics</li></ul>
           <div class="links">
-            <a class="btn btn-sm" href="https://hypergs.itch.io/suikaclone" target="_blank" rel="noopener">Play on itch.io</a>
+            <a class="btn btn-sm" href="https://hypergs.itch.io/suikaclone" target="_blank" rel="noopener">Play it ↗</a>
           </div>
         </article>
 
         <article class="card">
-          <div class="card-top">
-            <span class="chip">Backend &amp; live ops</span>
-          </div>
+          <div class="card-top"><span class="chip">Backend &amp; live ops</span></div>
           <h3>AI Balancing Service</h3>
-          <p class="role">Solo — .NET 9 · PostgreSQL · Azure</p>
+          <p class="role">Solo · .NET 9 · PostgreSQL · Azure</p>
           <p>
-            The gameplay loop alone can't tell you whether the enemies are <em>fair</em>. This
-            service closes that loop: it ingests combat telemetry from the Unity client, scores each
-            enemy configuration on a fitness function, and breeds the next generation of difficulty
-            parameters with a genetic algorithm — independently for every player.
+            A service that measures how fights actually go, then breeds the next generation of
+            enemy parameters — separately for every player.
           </p>
-          <p class="card-note">
-            Four candidates per generation, elitist crossover, ±5% mutation, and an
-            evidence gate that blocks evolution until every candidate has enough real fights.
-            Admin dashboard for live logs and manual overrides; CI/CD through GitHub Actions to
-            Azure App Service.
-          </p>
-          <ul class="tags"><li>.NET 9</li><li>ASP.NET Core</li><li>Genetic algorithm</li><li>PostgreSQL</li><li>Azure</li></ul>
+          <h4 class="mini">What I built</h4>
+          <ul class="plain">
+            <li>Genetic algorithm: 4 candidates, elitist crossover, ±5% mutation.</li>
+            <li>Fitness scored from real combat telemetry.</li>
+            <li>JWT-secured REST API and admin dashboard.</li>
+            <li>CI/CD to Azure App Service.</li>
+          </ul>
+          <ul class="tags"><li>.NET 9</li><li>Genetic algorithm</li><li>PostgreSQL</li><li>Azure</li></ul>
           <div class="links">
             <a class="btn btn-sm" href="https://github.com/Phat-Hy" target="_blank" rel="noopener">Code on request</a>
           </div>
@@ -136,14 +145,14 @@
         <article class="card card-quiet">
           <div class="card-top"><span class="chip">More</span></div>
           <h3>Other repositories</h3>
-          <p class="role">Code &amp; experiments</p>
+          <p class="role">Prototypes &amp; coursework</p>
           <p>
-            Smaller projects, prototypes and coursework live on GitHub — engine experiments,
-            tools, and whatever I was curious about that week.
+            Smaller experiments and engine studies — mostly an excuse to rebuild a mechanic until I
+            understand why it feels the way it does.
           </p>
           <ul class="tags"><li>C#</li><li>Tools</li><li>Prototypes</li></ul>
           <div class="links">
-            <a class="btn btn-sm" href="https://github.com/Phat-Hy" target="_blank" rel="noopener">GitHub profile</a>
+            <a class="btn btn-sm" href="https://github.com/Phat-Hy" target="_blank" rel="noopener">GitHub ↗</a>
           </div>
         </article>
 
@@ -151,8 +160,81 @@
     </div>
   </section>
 
+  <!-- ---------------------------------------------------------- case studies -->
+  <section class="section alt" id="cases">
+    <div class="wrap">
+      <h2 class="section-title"><span>Case studies</span></h2>
+      <p class="section-intro">
+        Two problems worth explaining, because the code was never the hard part.
+      </p>
+
+      <article class="case">
+        <div class="case-head">
+          <span class="case-num">01</span>
+          <h3>Making a squad stop clumping</h3>
+        </div>
+        <div class="case-grid">
+          <div>
+            <h4 class="mini">Problem</h4>
+            <p>
+              Every agent evaluated cover in isolation, so a squad of twelve would all claim the
+              best wall, stack into one silhouette, and die together.
+            </p>
+          </div>
+          <div>
+            <h4 class="mini">Approach</h4>
+            <p>
+              Cover points are claimed before movement, so a claimed point drops out of what the
+              next agent can evaluate. Engagement distance is spread across the squad, and targets
+              are distributed instead of first-come.
+            </p>
+          </div>
+          <div>
+            <h4 class="mini">Result</h4>
+            <p>
+              Enemies fan into readable positions rather than a pile. You can tell at a glance who
+              is suppressing and who is repositioning.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-head">
+          <span class="case-num">02</span>
+          <h3>Balancing difficulty without a designer</h3>
+        </div>
+        <div class="case-grid">
+          <div>
+            <h4 class="mini">Problem</h4>
+            <p>
+              Enemy difficulty is a bag of numbers: health, accuracy, how often they push versus
+              take cover. Tuning that by hand, per player, is not a one-person job.
+            </p>
+          </div>
+          <div>
+            <h4 class="mini">Approach</h4>
+            <p>
+              The client reports what actually happened in each fight. A .NET service scores every
+              enemy configuration with a fitness function, then breeds the next generation —
+              elitist selection, 60/40 blending crossover, ±5% mutation, gated until each candidate
+              has seen enough real fights.
+            </p>
+          </div>
+          <div>
+            <h4 class="mini">Result</h4>
+            <p>
+              Difficulty evolves per player from evidence instead of guesswork, and parameters update
+              in a live build without shipping a patch.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <!-- -------------------------------------------------------------- skills -->
-  <section class="section alt" id="skills">
+  <section class="section" id="skills">
     <div class="wrap">
       <h2 class="section-title"><span>What I work with</span></h2>
       <div class="skills">
@@ -197,37 +279,32 @@
   </section>
 
   <!-- --------------------------------------------------------------- about -->
-  <section class="section" id="about">
+  <section class="section alt" id="about">
     <div class="wrap narrow">
       <h2 class="section-title"><span>About</span></h2>
       <p class="lead-p">
-        I studied Software Engineering at FPT University — an AQAS-accredited programme
-        (major code 7480201, 148 credits) built on project-based learning, where every semester
-        ends in a real deliverable rather than an exam.
+        I studied Software Engineering at FPT University — an AQAS-accredited programme built on
+        project-based learning, where every semester ends in something you can actually run.
       </p>
       <p>
-        That structure is why I ended up on the engineering side of games rather than the design
-        side: I like the part where a system has to survive contact with players. My capstone work
-        became an FPS heading to Steam, and the AI I wrote for it is the piece I am most proud of,
-        because enemy behaviour is where gameplay, performance and readability all collide.
-      </p>
-      <p>
-        Outside of that I keep building small things to learn mechanics properly — the fastest way
-        to understand why a game feels the way it does is to rebuild the part that makes it feel
-        that way.
+        That is why I landed on the engineering side of games rather than design. I like the part
+        where a system has to survive contact with players: the AI that looks smart in isolation and
+        falls apart the moment twelve of them exist at once, the frame time that only breaks in a
+        real fight. My capstone became an FPS heading to Steam, and the piece I am proudest of is the
+        pipeline that keeps tuning it after the build is closed.
       </p>
       <div class="edu">
         <div class="edu-row">
-          <span class="edu-when">Software Engineering</span>
-          <span class="edu-what">FPT University · Bachelor's</span>
+          <span class="edu-when">Degree</span>
+          <span class="edu-what">Bachelor of Software Engineering, FPT University</span>
         </div>
         <div class="edu-row">
           <span class="edu-when">Focus</span>
-          <span class="edu-what">Game development track, gameplay &amp; AI</span>
+          <span class="edu-what">Game development track — gameplay systems and AI</span>
         </div>
         <div class="edu-row">
           <span class="edu-when">Capstone</span>
-          <span class="edu-what">Title heading to Steam with AnomalyVN Studio</span>
+          <span class="edu-what">81 Days and Nights, with AnomalyVN Studio</span>
         </div>
       </div>
     </div>
@@ -238,14 +315,18 @@
     <div class="wrap narrow center">
       <h2 class="section-title center"><span>Get in touch</span></h2>
       <p class="lead-p center">
-        Open to Unity gameplay and AI engineering roles.
-        The fastest way to reach me is email.
+        Open to Unity gameplay and tools engineering roles. Email is the fastest way to reach me.
       </p>
       <div class="cta-row center-row">
         <a class="btn btn-primary" href="mailto:hyphat2942004@gmail.com">hyphat2942004@gmail.com</a>
         <a class="btn" href="https://github.com/Phat-Hy" target="_blank" rel="noopener">GitHub</a>
         <a class="btn" href="https://hypergs.itch.io" target="_blank" rel="noopener">itch.io</a>
       </div>
+      <!-- Enable this once the CV has real dates filled in.
+      <div class="cta-row center-row">
+        <a class="btn btn-sm" href="assets/PHAT-HY-CV.pdf" download>Download CV (PDF)</a>
+      </div>
+      -->
     </div>
   </section>
 
@@ -253,7 +334,7 @@
 
 <footer class="foot">
   <div class="wrap foot-inner">
-    <p>© <span id="year">2026</span> Phat Hy. Built with plain HTML, CSS and JavaScript.</p>
+    <p>© <span id="year">2026</span> Phat Hy. Plain HTML, CSS and JavaScript.</p>
     <p class="foot-links">
       <a href="https://github.com/Phat-Hy/Game-Portfolio" target="_blank" rel="noopener">Source</a>
     </p>
