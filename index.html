@@ -123,6 +123,41 @@
       <!-- 03 -->
       <article class="proj">
         <div class="proj-body">
+          <h3>TrueEnding <span class="year">(2026)</span></h3>
+          <p class="role">Systems research &amp; tooling</p>
+          <p>
+            A byte-matching decompilation of <em>The Last Story</em> (Nintendo Wii), paired with a
+            static recompilation that runs the game natively on PC instead of inside an emulator.
+            Half the game's code is matched byte-for-byte, and the native runner draws it in a
+            real window at a configurable frame rate.
+          </p>
+          <h4 class="mini">Contributions</h4>
+          <ul class="plain">
+            <li>Build pipeline: a Python generator emitting Ninja + Metrowerks CodeWarrior builds, with per-unit byte-match reporting</li>
+            <li>Verification tooling: an interactive assembly diff helper and objdiff integration, plus a machine-readable progress ledger tracking match state per module</li>
+            <li>Native host runtime: memory mapping and MMIO shims so PowerPC 750CL guest code executes on x86-64 without emulator overhead</li>
+            <li>Matched low-level systems — OS threading and memory arenas, DVD/NAND I/O, GX graphics pipeline</li>
+            <li>Work spanning C, C++ and PowerPC assembly across 522 linked translation units</li>
+          </ul>
+          <dl class="meta">
+            <div><dt>Role</dt><dd>Solo — tooling, systems, native runtime</dd></div>
+            <div><dt>Target</dt><dd>Wii (SLSEXJ) · PowerPC 750CL</dd></div>
+            <div><dt>Stack</dt><dd>C, C++, PowerPC assembly, Python, Ninja</dd></div>
+            <div><dt>Assets</dt><dd>None included — requires your own disc dump</dd></div>
+          </dl>
+          <p class="proj-links">
+            <a href="https://github.com/Phat-Hy/TrueEnding" target="_blank" rel="noopener">Repository ↗</a>
+          </p>
+        </div>
+        <div class="proj-thumb thumb-plate" aria-hidden="true">
+          <span class="plate-mark">TE</span>
+          <span class="plate-label">Wii byte-matching decomp · native PC runner</span>
+        </div>
+      </article>
+
+      <!-- 04 -->
+      <article class="proj">
+        <div class="proj-body">
           <h3>SuikaClone <span class="year">(2025)</span></h3>
           <p class="role">Solo project</p>
           <p>
@@ -194,7 +229,7 @@
           <h3>Engine &amp; language</h3>
           <ul>
             <li>Unity (2D / 3D, WebGL)</li>
-            <li>C#, C++ fundamentals</li>
+            <li>C#, C/C++</li>
             <li>NavMesh &amp; pathfinding</li>
             <li>Unity UI, Animator</li>
           </ul>
@@ -214,7 +249,8 @@
             <li>Unity Editor extensions</li>
             <li>Custom inspectors &amp; CLIs</li>
             <li>Automated integration tests</li>
-            <li>Build &amp; deployment pipelines</li>
+            <li>Build toolchains (Ninja, CodeWarrior)</li>
+            <li>Deployment pipelines</li>
           </ul>
         </div>
         <div class="skill-col">
