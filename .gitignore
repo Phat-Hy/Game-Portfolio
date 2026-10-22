@@ -1,0 +1,13 @@
+# deployment state (contains the live URL / account name)
+.deploy-state.json
+
+# OS / editor noise
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# never commit local env files
+.env
+.env.*
