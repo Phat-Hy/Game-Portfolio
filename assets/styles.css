@@ -406,6 +406,12 @@ p:last-child { margin-bottom: 0; }
 .card h3 { font-size: 21px; font-weight: 630; margin-bottom: 4px; }
 .card .role { margin-bottom: 14px; }
 .card p { color: var(--ink-dim); font-size: 15.5px; }
+.card-note {
+  font-size: 14px !important;
+  color: var(--ink-faint) !important;
+  border-left: 2px solid var(--line);
+  padding-left: 14px;
+}
 .card .links { margin-top: auto; padding-top: 22px; }
 
 /* --------------------------------------------------------------- skills */

@@ -111,18 +111,25 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="chip">Graduation thesis</span>
+            <span class="chip">Backend &amp; live ops</span>
           </div>
-          <h3>Thesis project</h3>
-          <p class="role">Team project — FPT University</p>
+          <h3>AI Balancing Service</h3>
+          <p class="role">Solo — .NET 9 · PostgreSQL · Azure</p>
           <p>
-            A full game production carried from concept to a buildable, releasable title as part of
-            my capstone project — scoping, iteration, integration and the engineering work that sits
-            under a shipping build.
+            The gameplay loop alone can't tell you whether the enemies are <em>fair</em>. This
+            service closes that loop: it ingests combat telemetry from the Unity client, scores each
+            enemy configuration on a fitness function, and breeds the next generation of difficulty
+            parameters with a genetic algorithm — independently for every player.
           </p>
-          <ul class="tags"><li>Unity</li><li>C#</li><li>Team workflow</li><li>Build &amp; integration</li></ul>
+          <p class="card-note">
+            Four candidates per generation, elitist crossover, ±5% mutation, and an
+            evidence gate that blocks evolution until every candidate has enough real fights.
+            Admin dashboard for live logs and manual overrides; CI/CD through GitHub Actions to
+            Azure App Service.
+          </p>
+          <ul class="tags"><li>.NET 9</li><li>ASP.NET Core</li><li>Genetic algorithm</li><li>PostgreSQL</li><li>Azure</li></ul>
           <div class="links">
-            <a class="btn btn-sm" href="https://store.steampowered.com/app/5042430/81_Days_And_Nights/" target="_blank" rel="noopener">Related build</a>
+            <a class="btn btn-sm" href="https://github.com/Phat-Hy" target="_blank" rel="noopener">Code on request</a>
           </div>
         </article>
 
@@ -152,9 +159,9 @@
         <div class="skill-col">
           <h3>Engine &amp; language</h3>
           <ul>
-            <li>Unity</li>
+            <li>Unity (2D / 3D, WebGL)</li>
             <li>C#</li>
-            <li>Object-oriented design</li>
+            <li>NavMesh &amp; pathfinding</li>
             <li>C++ fundamentals</li>
           </ul>
         </div>
@@ -162,9 +169,18 @@
           <h3>Gameplay</h3>
           <ul>
             <li>Enemy AI behaviour</li>
-            <li>Combat &amp; wave systems</li>
+            <li>Cover, flanking &amp; squad logic</li>
             <li>Physics &amp; collision</li>
             <li>UI implementation</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3>Tools &amp; pipeline</h3>
+          <ul>
+            <li>Unity Editor extensions</li>
+            <li>Custom inspectors &amp; CLIs</li>
+            <li>Automated integration tests</li>
+            <li>Build &amp; deployment pipelines</li>
           </ul>
         </div>
         <div class="skill-col">
@@ -172,8 +188,8 @@
           <ul>
             <li>Debugging &amp; profiling</li>
             <li>Performance optimisation</li>
-            <li>Git version control</li>
-            <li>Agile / team workflow</li>
+            <li>.NET / REST services</li>
+            <li>Git &amp; team workflow</li>
           </ul>
         </div>
       </div>
@@ -226,7 +242,7 @@
         The fastest way to reach me is email.
       </p>
       <div class="cta-row center-row">
-        <a class="btn btn-primary" href="mailto:__EMAIL__">__EMAIL__</a>
+        <a class="btn btn-primary" href="mailto:hyphat2942004@gmail.com">hyphat2942004@gmail.com</a>
         <a class="btn" href="https://github.com/Phat-Hy" target="_blank" rel="noopener">GitHub</a>
         <a class="btn" href="https://hypergs.itch.io" target="_blank" rel="noopener">itch.io</a>
       </div>
