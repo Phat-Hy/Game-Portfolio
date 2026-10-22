@@ -1,6 +1,6 @@
 # Game Portfolio — Phat Hy
 
-Personal portfolio site for **Phat Hy** (Hồ Minh Phát) — Unity game developer working on
+Personal portfolio site for **Phat Hy** (Hỷ Minh Phát) — Unity game developer working on
 gameplay systems and enemy AI.
 
 Static site: plain HTML, CSS and JavaScript. No build step, no framework, no external
