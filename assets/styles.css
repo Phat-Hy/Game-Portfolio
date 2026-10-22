@@ -157,6 +157,7 @@ h1, h2, h3 {
   gap: 12px;
 }
 .center-row { justify-content: center; }
+.cta-row + .cta-row { margin-top: 14px; }
 
 .btn {
   display: inline-block;
