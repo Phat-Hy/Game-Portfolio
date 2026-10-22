@@ -433,6 +433,7 @@ p:last-child { margin-bottom: 0; }
   overflow: hidden;
 }
 .proj-thumb.thumb-169 { aspect-ratio: 16 / 9; }
+.proj-thumb.thumb-wide { aspect-ratio: 2561 / 1314; }
 .proj-thumb img {
   width: 100%;
   height: 100%;
