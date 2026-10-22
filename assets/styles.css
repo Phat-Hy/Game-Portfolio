@@ -187,6 +187,12 @@ h1, h2, h3 {
 /* --------------------------------------------------------------- section */
 
 .section { padding: 68px 0; }
+
+.exp-title {
+  font-size: 22px;
+  margin: 0 0 6px;
+}
+.exp-title .year { margin-left: 10px; }
 .section.alt {
   background: var(--paper-tint);
   border-block: 1px solid var(--rule-soft);
